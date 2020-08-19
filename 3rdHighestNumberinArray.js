@@ -26,6 +26,7 @@ function thirdhighvalue(arr){
                 y = 0;
             }
             m++;
+            
         }
     }
 }
