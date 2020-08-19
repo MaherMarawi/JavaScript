@@ -29,5 +29,5 @@ function thirdhighvalue(arr){
         }
         }
     }
-    var x = [60,43,76,1,8,90,87,1,0,86,3]
+    var x = [60,43,76,1,8]
     console.log(thirdhighvalue(x))
