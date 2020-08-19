@@ -26,11 +26,9 @@ function thirdhighvalue(arr){
                 y = 0;
             }
             m++;
-            
         }
     }
 }
-
 var x = [60,43,76,1,8,87]
 console.log(thirdhighvalue(x))
 
