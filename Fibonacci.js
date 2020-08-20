@@ -13,7 +13,7 @@ var y = 1;
 var z;
 console.log(x)
 console.log(y)
-for (let i = 2; i < 50; i++) {
+for (let i = 1; i < 50; i++) {
      z = x + y;
      console.log(z)
      x = y;
