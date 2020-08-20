@@ -8,20 +8,15 @@
 
 //code:
 function PalindromeChecker(text){
-    var t = text.toLowerCase().split("")
-    if (t.length % 2 == 0) {
+    var t = text.toLowerCase().split(" ").join("").toLowerCase();
         for (let i = 0 ; i < t.length/2 ; i++) {
             if (t[i] !== t[t.length-i-1]) {
                 return false
             }
         }
         return true
-    }
-    else{
-        return 'the length of this string is ood number' 
-    }
 }
-console.log(PalindromeChecker('mryYrm'))
+console.log(PalindromeChecker('Hello OlLEh'))
 
 //diagram
 //i = 0 => m == m keep the proces
