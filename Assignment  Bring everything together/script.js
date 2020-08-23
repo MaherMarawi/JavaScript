@@ -4,10 +4,12 @@ var cb = document.getElementById('mouse-move');
 cb.addEventListener('mousemove',changecolor)
 function changecolor(e) {
     body.style.backgroundColor = "rgb("+e.offsetX+","+e.offsetY+", 30)"
+    cb.style.backgroundColor = "rgb("+e.offsetX+","+e.offsetY+", 30)"
 }
 cb.addEventListener('mouseout',normalcolor)
 function normalcolor(e) {
     body.style.backgroundColor = "#f4f4f4"
+    cb.style.backgroundColor = "#f4f4f4"
 }
 var myForm = document.getElementById('form-group');
 var itemList = document.getElementById('list-group')
