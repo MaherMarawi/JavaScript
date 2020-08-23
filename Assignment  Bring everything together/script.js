@@ -17,11 +17,14 @@ function addItem(e) {
     var text = document.getElementById('text-list') ;
     var newItem = document.createElement('li'); 
     newItem.appendChild(document.createTextNode(text.value));
-    newItem.className = 'list-group-item'
-    //console.log(newItem)
-    itemList.appendChild(newItem);
-    text.value = '';
-    text.preventDefault = '';
+    if (text.value == '') {
+        alert('you have to write the name of the item')
+    }else{
+        newItem.className = 'list-group-item'
+        //console.log(newItem)
+        itemList.appendChild(newItem);
+        text.value = '';
+    }
 }
 var lists = document.getElementsByClassName('list-group-item')
 var btn = document.getElementById('btn')
