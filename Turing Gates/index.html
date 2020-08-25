@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turing Gates</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js
+    "></script>
+    <style>
+        #container{
+            margin: 35px;
+            text-align: center;
+        }
+        .image{
+            width: 1000px;
+            height: 200px;
+        }
+        .overflow{
+            overflow: hidden;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="overflow">
+            <img src="images/1a.jpg" alt="t1" class="image">
+            <img src="images/1b.jpg" alt="g1" class="image">
+        </div>
+        <div class="overflow">
+            <img src="images/2a.jpg" alt="t2" class="image">
+            <img src="images/2b.jpg" alt="g2" class="image">
+        </div>
+        <div class="overflow">
+            <img src="images/3a.jpg" alt="t3" class="image">
+            <img src="images/3b.jpg" alt="g3" class="image">
+        </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+        $('img').click(function(){
+            switch ($('img').attr('alt')) {
+                case 't1':
+                    $(this).hide();
+                    break;
+                case 't2':
+                    $(this).hide();
+                    break;
+                case 't3': 
+                    $(this).hide();
+                    break;
+            }
+        })
+    })
+    </script>
+</body>
+</html>
