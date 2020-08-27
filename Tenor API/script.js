@@ -23,7 +23,7 @@ $(document).ready(function(){
         if (search != '' && lmt != 0) {
             getGifs(search,lmt)
         }else{
-            $('#gifs').append('<h1 class="display-1">You have to fill all fields</h1>');
+            $('#gifs').append('<h4 class="display-4">You have to fill all fields</h4>');
         }
     })
     function getGifs(name,number) {
@@ -46,7 +46,7 @@ $(document).ready(function(){
                 $('#gifs').append(img);
                 }
         }else{
-            $('#gifs').append('<h1 class="display-1">No results ... Try another thing</h1>');
+            $('#gifs').append('<h4 class="display-4">No results ... Try another thing</h4>');
         }
         }
     }
