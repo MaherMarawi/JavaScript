@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TenorAPI </title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <style>
+        body{
+            background-color:antiquewhite
+        }
+        header{
+            text-align: center;
+            color: rgb(63, 52, 39);
+        }
+        #container{
+            margin: 20px;
+            width: 90%;
+            text-align: center;
+        }
+        .imgClass{
+            width: 200px;
+            height: 120px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+</body>
+    <header><h1 class="display-1" id="theader">Tenor Gifs</h1></header>
+    <div id="container">
+        <div style="text-align: center;margin-left: 130px;">
+            <input type="text" id="name" placeholder="Just Write">
+            <input type="number" id="lmt" style="width: 40px;" placeholder="num" min="1" max="50" value="0">
+            <input type="button" value="Search" id="button1">
+        </div>
+        <div id="load" style="margin-top: 20px;margin-left: 130px;"></div>
+        <div id="gifs" style="margin-top: 20px;margin-left: 130px;"></div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        $(document).ready(function(){
+            // $(document).on('mouseenter','.imgClass',function(e){
+            //     $(this).css('width','300px');
+            //     $(this).css('height','180px');
+            //     $('#theader').css('color',"rgb("+e.offsetX+","+e.offsetY+", 30)")
+            // })
+            // $(document).on('mouseout','.imgClass',function(e){
+            //     $(this).css('width','200px');
+            //     $(this).css('height','120px');
+            //     $('#theader').css('color',"rgb(63, 52, 39)")
+            // })
+            $(document).on('mouseenter','.imgClass',function(e){
+                $(this).animate({
+                    width:'300px',
+                    height:'180px',
+                })
+                $('#theader').css('color',"rgb("+e.offsetX+","+e.offsetY+", 30)")
+            })
+            $(document).on('mouseout','.imgClass',function(e){
+                $(this).animate({
+                    width:'200px',
+                    height:'120px',
+                })
+                $('#theader').css('color',"rgb(63, 52, 39)")
+            })
+
+
+
+
+
+        })
+    </script>
+</body>
+</html>
