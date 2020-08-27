@@ -1,13 +1,13 @@
 $(document).ready(function(){
     $(document).on('mouseenter','.imgClass',function(e){
-        $(this).animate({
+        $(e.target).animate({
             width:'300px',
             height:'180px',
         })
         $('#theader').css('color',"rgb("+e.offsetX+","+e.offsetY+", 30)")
     })
     $(document).on('mouseout','.imgClass',function(e){
-        $(this).animate({
+        $(e.target).animate({
             width:'200px',
             height:'120px',
         })
