@@ -19,11 +19,12 @@ function BubbleSort(arr) {
             arr[i + 1] = x
             }
         }
+        //console.log(arr)
         j++;
     }
     return arr
 }
-var numbs = [9 ,5 ,4 ,8 ,3 ,7,3,4,2,3,4,5,6,2,]
+var numbs = [9 ,5 ,4 ,8 ,3]
 console.log(BubbleSort(numbs))
 
 //diagram

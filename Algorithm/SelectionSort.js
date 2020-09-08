@@ -19,6 +19,7 @@ function BubbleSort(arr) {
                 }
                 j++
             }
+            //console.log(arr)
             y = arr[i]
             arr[i] = min
             arr[x] = y
