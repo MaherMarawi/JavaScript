@@ -21,23 +21,36 @@ $(document).ready(function(){
             lmt = 50;
         }
         if (search != '' && lmt != 0) {
-            getGifs(search,lmt)
+            let url = `https://api.tenor.com/v1/search?q=${search}&key=D4SHK5J6H1FQ&limit=${lmt}`
+            getGifs(url)
+                .then(data => renderData(data))
+                .catch(err => renderError(err));
         }else{
             $('#gifs').append('<h4 class="display-4">You have to fill all fields</h4>');
         }
     })
-    function getGifs(name,number) {
-    var xhr = new XMLHttpRequest();
-    xhr.open('GET', "https://api.tenor.com/v1/search?q=" + name + "&key=D4SHK5J6H1FQ&limit=" + number , true);
-    xhr.onprogress = function(){
-        $('#load').append('<h1>loading...</h1>');
+    function getGifs(url) {
+        return new Promise((resolve, reject) => {
+            let xhr = new XMLHttpRequest();
+            xhr.open('GET', url , true);
+            xhr.onprogress = function(){
+                $('#load').append('<h1>loading...</h1>');
+            }
+            xhr.onload = function(){
+                if (this.status == 200) {
+                    resolve(xhr.response)
+                        
+                    
+                }else{
+                    reject(new err(xhr.status))
+                }
+            }
+            xhr.send();
+        })
     }
-    xhr.onload = function(){
-    if (this.status == 200) {
-        console.log(xhr.responseText)
-        
-        var data = JSON.parse(xhr.responseText); 
-        var top_10_gifs = data["results"];
+    function renderData(data) {
+        let newData = JSON.parse(data)
+        var top_10_gifs = newData["results"];
         $('#load').empty();
         if (top_10_gifs.length > 0) {
             for (let i in top_10_gifs ) {
@@ -48,11 +61,12 @@ $(document).ready(function(){
         }else{
             $('#gifs').append('<h4 class="display-4">No results ... Try another thing</h4>');
         }
-        }
     }
-    xhr.send(null);
+    function renderError(err) {
+        console.log(err.message)
     }
 })
+
 
     
 
