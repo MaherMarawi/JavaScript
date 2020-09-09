@@ -39,8 +39,6 @@ $(document).ready(function(){
             xhr.onload = function(){
                 if (this.status == 200) {
                     resolve(xhr.response)
-                        
-                    
                 }else{
                     reject(new err(xhr.status))
                 }
