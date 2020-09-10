@@ -52,7 +52,7 @@ let person1 = new Person('John', 1986)
 console.log(person1.get_summary())
 console.log(person1.get_age())
 //===========================================================================
-//                                 SubClass
+//                             SubClass                            
 class Teacher extends Person {
   constructor(name, birthday, subject) {
     super(name, birthday)
@@ -63,5 +63,6 @@ class Teacher extends Person {
   }
 }
 let teacher1 = new Teacher('Joe', 1974, 'math')
+//console.log(teacher1)
 console.log(teacher1.get_summary())
 console.log(teacher1.get_age())
